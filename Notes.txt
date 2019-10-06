@@ -1,0 +1,15 @@
+Future ideas:
+  - multiple maws
+  - wizards who project barries which cannot be passed until the wizard is consumed
+  - warp points
+  - wrapping maps
+  - pickups which let you move through the void once (per pickup)
+  - moving terrain? Probably not a good ideas
+  - terrain which disappears on its own after some number of turns?
+  
+
+omnia erunt nihilum - all will be annihilated
+omnia erunt nihilo - all will be nothing
+omnia sunt nihilo - all this are nothing
+
+All this arise from nothingness, and to nothingness all things return
