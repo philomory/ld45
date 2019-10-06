@@ -64,7 +64,7 @@ class GameState
     end
     
     def handle_input(action)
-      if action == :quit || @finishing
+      if [:quit,:pause].include?(action) || @finishing
         done!
       else
         next_part!

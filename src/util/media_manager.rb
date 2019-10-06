@@ -20,7 +20,12 @@ module MediaManager
       @images ||= {}
       @images[name] ||= _load_image_named(name)
     end
-    
+
+    def animation_frames(name)
+      @animations ||= {}
+      @animations[name] ||= _load_animation_named(name)
+    end
+
     def font(name)
       @fonts ||= {}
       @fonts[name] ||= _load_font_named(name)
@@ -96,8 +101,17 @@ module MediaManager
       #Settings[:music] ? play_music : stop_music
     end
   
-    private  
+    private
     
+    def _load_animation_named(name)
+      fname = _animation_map[name] || "#{name}.png"
+      _tiles(fname)
+    end
+
+    def _animation_map
+      @_animation_map ||= YAML.load_file(File.join(DATA_ROOT,'animations.yml'))
+    end
+
     def _load_sfx_named(name)
       fname = _sfx_map[name] || "#{name}.wav"
       path = File.join(MEDIA_ROOT,"sfx",fname)

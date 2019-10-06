@@ -157,7 +157,16 @@ class Game < Gosu::Window
       @skip_display = false
       self.game_state = GameState::WaitingForPlayer.new(self)
     else
-      self.game_state = GameState::LevelSplashScreen.new(self) { self.game_state = GameState::WaitingForPlayer.new(self) }
+      player.animating = true
+      self.game_state = GameState::LevelSplashScreen.new(self) do 
+        anim = FrameAnimation.new(player,'devouring',2000)
+        anim.on_frame(4) do
+          player.cell.terrain_collapse!
+        end
+        self.schedule_animation(anim) do
+          self.game_state = GameState::WaitingForPlayer.new(self) 
+        end
+      end
     end
   end
   
@@ -178,6 +187,6 @@ class Game < Gosu::Window
   end
   
   def in_menu?
-    @game_state.kind_of?(GameState::Menu)
+    @game_state.is_menu?
   end
 end

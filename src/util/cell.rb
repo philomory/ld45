@@ -18,6 +18,7 @@ class Cell
   
   def arriving!(unit)
     edges.each(&:player_arriving!) if unit.player?
+    terrain_collapse! if unit && unit.causes_collapse?
   end
 
   def leaving!(unit)
@@ -29,7 +30,6 @@ class Cell
     occupant_left(@occupant) if @occupant
     @occupant = unit
     @prop.on_enter(unit) if @prop && unit
-    terrain_collapse! if unit && unit.causes_collapse?
     undo_via { @occupant = old_occupant }
   end
 
