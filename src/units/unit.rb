@@ -28,6 +28,8 @@ class Unit < GameObject
   def move(direction,&callback)
     target = @cell.neighbor_in_direction(direction)
     if @cell.passable_in_direction?(direction) && target.passable?(self)
+      @cell.leaving!(self)
+      target.arriving!(self)
       anim = MovementAnimation.new(self,@cell,target,$game.animation_duration)
       $game.schedule_animation(anim) do
         self.position = target

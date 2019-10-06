@@ -51,6 +51,7 @@ class World
     tmo = level_data.player
     @player = Player.new(health:1, weapon_count: 0) #tmo.properties['rocks'].to_i || 3)
     @player.position = @grid[tmo.x, tmo.y]
+    @player.cell.player_starts_here!
      
   end
   

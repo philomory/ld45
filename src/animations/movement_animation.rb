@@ -35,8 +35,5 @@ class MovementAnimation < Animation
     when Cell then [obj.xpos, obj.ypos]
     else obj
     end
-  end
-  
-
-  
+  end  
 end

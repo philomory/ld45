@@ -41,6 +41,14 @@ vertical_edge:
 horizontal_edge:
   set: broken.png
   index: 1
+
+vertical_edge_glow:
+  set: broken.png
+  index: 2
+
+horizontal_edge_glow:
+  set: broken.png
+  index: 3
   
 background0:
   image: background0.png  

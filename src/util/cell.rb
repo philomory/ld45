@@ -11,7 +11,19 @@ class Cell
     @x, @y, @grid = x, y, grid
     @worked = false
   end
+
+  def player_starts_here!
+    edges.each(&:player_starts_adjacent!)
+  end
   
+  def arriving!(unit)
+    edges.each(&:player_arriving!) if unit.player?
+  end
+
+  def leaving!(unit)
+    edges.each(&:player_leaving!) if unit.player?
+  end
+
   def occupant=(unit)
     old_occupant = @occupant
     occupant_left(@occupant) if @occupant
@@ -20,11 +32,15 @@ class Cell
     terrain_collapse! if unit && unit.causes_collapse?
     undo_via { @occupant = old_occupant }
   end
+
+  def occupied?
+    !!occupant
+  end
   
   def occupant_left(occupant)
   #  terrain_collapse! if terrain.collapsing? && occupant.causes_collapse?
   end
-  
+
   def terrain_collapse!
     # MediaManager.play_sfx("crumble")
     self.terrain = Terrain::Empty
@@ -71,6 +87,10 @@ class Cell
     when :south then bottom_edge
     else raise "Bad direction: #{direction}"
     end
+  end
+
+  def edges
+    [left_edge,right_edge,top_edge,bottom_edge].compact
   end
 
   def passable_in_direction?(dir)
