@@ -1,0 +1,6 @@
+pickup_key: pickup_key.wav
+portal: portal.wav
+enemy_stunned: enemy_stunned.wav
+player_hurt: player_died.wav
+unlock: door_opened.wav
+buzzer: buzzer.wav

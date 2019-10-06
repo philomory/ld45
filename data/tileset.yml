@@ -1,0 +1,59 @@
+empty:
+  set: ground.png
+  index: 0
+
+player_south_1:
+  set: devourer.png
+  index: 0
+  
+player_south_2:
+  set: devourer.png
+  index: 1
+  
+player_north_1:
+  set: devourer.png
+  index: 2
+  
+player_north_2:
+  set: devourer.png
+  index: 3
+  
+player_east_1:
+  set: devourer.png
+  index: 4
+  
+player_east_2:
+  set: devourer.png
+  index: 5
+  
+player_west_1:
+  set: devourer.png
+  index: 6
+  
+player_west_2:
+  set: devourer.png
+  index: 7
+
+vertical_edge:
+  set: broken.png
+  index: 0
+
+horizontal_edge:
+  set: broken.png
+  index: 1
+  
+background0:
+  image: background0.png  
+  
+background:
+  image: background.png
+  
+credits:
+  image: credits.png
+  
+main_menu: 
+  image: credits.png
+  
+title_screen:
+  image: title_screen.png
+  
