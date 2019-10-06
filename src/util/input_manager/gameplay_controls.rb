@@ -33,7 +33,7 @@ class InputManager
     end
     
     def setup_bindings
-      @input_bindings = Settings[:input][:bindings][:separate]
+      @input_bindings = Settings[:input][:bindings][:gameplay]
     end
     
     def settings_dump

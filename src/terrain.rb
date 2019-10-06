@@ -37,6 +37,10 @@ class Terrain
   def collapsing?
     true
   end
+
+  def tag
+    name
+  end
   
   OutOfBounds = new(passable: false, name: "out_of_bounds")
   Dirt = new(name: "dirt")
@@ -48,5 +52,6 @@ class Terrain
   Collapsing = new(name: "collapsing", collapsing: true)
   BrokenFloor = new(name: "broken_floor", collapsing: true)
   FilledHole = new(name: "filled_hole")
-  
+  Ruins = new(name: "ruins1",collapsing: true)
+
 end

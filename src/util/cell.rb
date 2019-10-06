@@ -43,8 +43,12 @@ class Cell
 
   def terrain_collapse!
     # MediaManager.play_sfx("crumble")
-    self.terrain = Terrain::Empty
-    self.decoration = nil
+    if self.decoration && self.decoration.tag == 'castle'
+      self.decoration = Terrain::Ruins
+    else
+      self.terrain = Terrain::Empty
+      self.decoration = nil
+    end
   end
 
   def empty?
