@@ -24,7 +24,7 @@ class Edge
   end
 
   def draw?
-    blocked && !(@c1.empty? && @c2.empty?)
+    blocked && (!@c1.empty? || @c1.occupant) && (!@c2.empty? || @c2.occupant)
   end
 
   def draw
