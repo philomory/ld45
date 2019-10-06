@@ -77,7 +77,7 @@ class TileMap
 end
 
 
-Tile = Struct.new(:image,:tag,:passable) do
+Tile = Struct.new(:image,:tag,:passable,:type) do
   def add_property(key,value)
     self[key.to_sym] = value
   end

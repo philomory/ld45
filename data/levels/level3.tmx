@@ -2,8 +2,8 @@
 <map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="12" height="8" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="92">
  <tileset firstgid="1" source="ground.tsx"/>
  <tileset firstgid="17" source="broken.tsx"/>
- <tileset firstgid="19" source="Decoration.tsx"/>
- <tileset firstgid="35" source="Devourer.tsx"/>
+ <tileset firstgid="19" source="decoration.tsx"/>
+ <tileset firstgid="35" source="devourer.tsx"/>
  <layer id="1" name="Terrain" width="12" height="8">
   <data encoding="base64">
    AQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAAAAAAAAAAACAAAAAgAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAAAAAAAAAAAAIAAAAOAAAACgAAAAIAAAAAAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAAAAAAAAAAAAIAAAACAAAADgAAAAIAAAAAAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAAAAAAIAAAACAAAAAgAAAAIAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAEAAAABAAAAAQAAAAAAAAACAAAAAgAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAAAAAAAAAAAAEAAAABAAAAAQAAAAAAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAAAAAAEAAAABAAAAAQAAAAEAAAABAAAA

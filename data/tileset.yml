@@ -2,6 +2,30 @@ empty:
   set: ground.png
   index: 0
 
+town1:
+  set: decoration.png
+  index: 0
+
+town1:
+  set: decoration.png
+  index: 0
+
+town1:
+  set: decoration.png
+  index: 0
+
+ruins1:
+  set: decoration.png
+  index: 7
+
+ruins2:
+  set: decoration.png
+  index: 11
+
+ruins3:
+  set: decoration.png
+  index: 15
+
 player_south_1:
   set: devourer.png
   index: 0

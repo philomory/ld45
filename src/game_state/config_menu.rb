@@ -5,7 +5,6 @@ class GameState
       add_option(->{"Fullscreen: #{$game.fullscreen? ? 'On' : 'Off'}"}) { $game.toggle_fullscreen! }
       add_slider("Music Volume:",0,Settings[:music],10) {|vol| MediaManager.music_volume = vol }
       add_slider("SFX Volume:",0,Settings[:sfx],10) {|vol| MediaManager.sfx_volume = vol }
-      add_option("Choose Control Style") { transition_to(GameState::ControlStyleMenu.new) }
       add_option("View/Customize Controls") { transition_to(GameState::ReviewInputBindings.new) }
       add_option("Back") { back }
     end

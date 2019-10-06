@@ -6,7 +6,7 @@ class InputManager
     METHODS[key] = klass
   end
   
-  def self.controls(type=:modifier)
+  def self.controls(type=:gameplay)
     METHODS[type]
   end
   
@@ -43,6 +43,7 @@ class InputManager
 
   def self.restore_default_bindings
     current_manager.restore_default_bindings
+    save_bindings
   end
   
   def self.save_bindings
@@ -51,7 +52,7 @@ class InputManager
   
   def self.defaults
     {
-      input_style: :modifier,
+      input_style: :gameplay,
       bindings: METHODS.reject {|k,v| k == :menu }.map {|key,klass| [key, klass.default_bindings]}.to_h
     }
   end

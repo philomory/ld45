@@ -1,21 +1,21 @@
 class InputManager
-  class SeparateControls < ControlType
+  class GameplayControls < ControlType
 
-    register :separate
+    register :gameplay
 
     DEFAULT_BINDINGS = {
+      KbUp => :north,
+      KbDown => :south,
+      KbLeft => :west,
+      KbRight => :east,
       KbW => :north,
       KbS => :south,
       KbA => :west,
       KbD => :east,
-      KbUp => :throw_north,
-      KbDown => :throw_south,
-      KbLeft => :throw_west,
-      KbRight => :throw_east,
       KbEscape => :pause,
       KbR => :restart,
-      KbU => :undo,
-      KbZ => :undo
+      KbZ => :undo,
+      KbU => :undo
     }.freeze
     
     BIND_LIST = {
@@ -23,10 +23,6 @@ class InputManager
       south: "Move Down",
       west: "Move Left",
       east: "Move Right",
-      throw_north: "Throw Up",
-      throw_south: "Throw Down",
-      throw_west: "Throw Left",
-      throw_east: "Throw Right",
       pause: "Pause Game",
       restart: "Restart Level",
       undo: "Undo Move"
