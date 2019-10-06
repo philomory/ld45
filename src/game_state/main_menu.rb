@@ -1,7 +1,7 @@
 class GameState
   class MainMenu < Menu
     def setup_menu
-      @title = "Strangeness"
+      @title = "...and to Nothingness Return"
       #@background_image = MediaManager.image("main_menu")
       add_slider("Continue: Level",0,Settings[:max_level],Settings[:max_level], auto: false) {|level| $game.start_game(level) } if Settings[:max_level] > 0
       add_option("Start Game") { @game.start_game(0) }

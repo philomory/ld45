@@ -1,0 +1,75 @@
+gold:
+  -
+    :text: In the beginning there was the Void.
+    :x: 10
+    :y: 10
+  -
+    :text: In the beginning there was the Not.
+    :x: 10
+    :y: 30
+  -
+    
+accident:
+  -
+    :text: "In the beginning, there was the Void."
+    :x: 10
+    :y: 10
+    :duration: 1.5
+  -
+    :text: "In the beginning, there was the Not."
+    :x: 10
+    :y: 30
+    :duration: 1.5
+  -
+    :text: "In the beginning, there was nothingness"
+    :x: 10
+    :y: 50
+    :pause: 0.1
+    :duration: 1.5
+    :discard: true
+  -
+    :text: "In the beginning, there was nothingness, and nothing else."
+    :x: 10
+    :y: 50
+    :duration: 3
+  -
+    :text: "But as the Not slept,"
+    :x: 10
+    :y: 90
+    :pause: 0.5
+    :duration: 1.25
+    :discard: true
+  -
+    :text: "But as the Not slept, a horrid and repugnant essence arose:"
+    :x: 10
+    :y: 90
+    :duration: 1.25
+  -
+    :text: "Existence"
+    :x: 10
+    :y: 110
+    :pause: 0.5
+    :discard: true
+  -
+    :text: "Existence, a violent crime against the Void."
+    :x: 10
+    :y: 110
+  -
+    :text: "And the nothing could only answer"
+    :x: 10
+    :y: 136
+    :pause: 0.5
+    :duration: 2.0
+  -
+    :text: "by disolving that Existence back into itself."
+    :x: 10
+    :y: 156
+  -
+    :text: "Start with nothing..."
+    :x: 10
+    :y: 200
+  -
+    :text: "...and to nothingness return."
+    :x: 150
+    :y: 200
+    

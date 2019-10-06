@@ -52,4 +52,8 @@ class GameState
   def needs_raw_input?
     false
   end
+
+  def is_menu?
+    false
+  end
 end

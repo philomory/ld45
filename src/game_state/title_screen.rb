@@ -6,12 +6,11 @@ class GameState
     end
     
     def handle_input(any)
-      @game.game_state = GameState::FadeTransition.new(self,GameState::MainMenu.new(@game))
+      @game.game_state = GameState::FadeTransition.new(self,GameState::IntroScreen.new('accident',@game))
     end
     
     def draw_world?
       false
-    end
-    
+    end   
   end
 end

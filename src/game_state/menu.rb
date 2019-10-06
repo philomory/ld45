@@ -30,7 +30,7 @@ class GameState
     def draw
       #bg_color = (0xEE * (1.0 - fade_portion)).floor * 0x01000000
       #@background_image.draw(0,0,11)
-      draw_text(@title,100,2)
+      draw_text(@title,100,1)
       @options.each_with_index do |option,index|
         scale = (index == @position) ? 1.5 : 1
         ypos = menu_start_pos + (75 * index)
@@ -84,5 +84,8 @@ class GameState
       false
     end
     
+    def is_menu?
+      true
+    end
   end
 end

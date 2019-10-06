@@ -1,0 +1,2 @@
+class FadeInAnimation < Animation
+end

@@ -19,7 +19,7 @@ class Game < Gosu::Window
     @animation_manager = AnimationManager.new(self)
     @game_state = GameState::TitleScreen.new(self)
 
-    self.caption = "Start with Nothing"
+    self.caption = "...and to Nothingness Return"
     
     @ui = UI.new(self)
     
