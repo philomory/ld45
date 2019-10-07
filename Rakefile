@@ -5,7 +5,7 @@ require 'httparty'
 require 'json'
 
 Rake::VersionTask.new do |task|
-  task.with_hg_tag = true
+  task.with_git_tag = true
 end
 
 directory "dist"
@@ -96,6 +96,8 @@ namespace :build do
     cp 'VERSION', SRC_BUILD_PATH  
   end
 end
+
+task :build => ['build:mac', 'build:win', 'build:src']
 
 
 namespace :release do
