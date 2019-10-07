@@ -1,4 +1,3 @@
-require 'pry'
 class GameState
   class PlayerDiedState < GameState
 
