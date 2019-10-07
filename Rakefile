@@ -103,18 +103,18 @@ task :build => ['build:mac', 'build:win', 'build:src']
 namespace :release do
   namespace :check do
     task :mac do
-      #released_version = JSON.parse(HTTParty.get("https://itch.io/api/1/x/wharf/latest?target=philomory/and-to-nothingness-return&channel_name=macos").body)
-      #raise "#{Version.current} already released for MacOS" if released_version == Version.current
+      released_version = JSON.parse(HTTParty.get("https://itch.io/api/1/x/wharf/latest?target=philomory/and-to-nothingness-return&channel_name=macos").body)
+      raise "#{Version.current} already released for MacOS" if released_version == Version.current
     end
     
     task :win do
-      #released_version = JSON.parse(HTTParty.get("https://itch.io/api/1/x/wharf/latest?target=philomory/and-to-nothingness-return&channel_name=win32").body)
-      #raise "#{Version.current} already released for Windows" if released_version == Version.current
+      released_version = JSON.parse(HTTParty.get("https://itch.io/api/1/x/wharf/latest?target=philomory/and-to-nothingness-return&channel_name=win32").body)
+      raise "#{Version.current} already released for Windows" if released_version == Version.current
     end
     
     task :src do
-      #released_version = JSON.parse(HTTParty.get("https://itch.io/api/1/x/wharf/latest?target=philomory/and-to-nothingness-return&channel_name=source").body)
-      #raise "#{Version.current} already released as source" if released_version == Version.current
+      released_version = JSON.parse(HTTParty.get("https://itch.io/api/1/x/wharf/latest?target=philomory/and-to-nothingness-return&channel_name=source").body)
+      raise "#{Version.current} already released as source" if released_version == Version.current
     end
       
   end
@@ -149,16 +149,16 @@ namespace :release do
     desc "Publish Win32 to itch.io"
     task :win => 'release:zip:win' do
       cp 'dist/win32/.itch.toml', WIN_BUILD_PATH
-      cp 'dist/win32/parts/ld38_itch.rb', WIN_BUILD_PATH
-      cp 'dist/win32/parts/strangeness_itch.bat', File.join(WIN_BUILD_PATH,'src')
+      cp 'dist/win32/parts/ld45_itch.rb', WIN_BUILD_PATH
+      cp 'dist/win32/parts/and_to_nothingness_return_itch.bat', File.join(WIN_BUILD_PATH,'src')
       #sh %[butler push --userversion-file=VERSION --fix-permissions dist/releases/strangeness-win32-#{Version.current}.zip philomory/strangeness:win32]
-      sh %[butler push --userversion-file=VERSION --fix-permissions #{WIN_BUILD_PATH} philomory/and-to-nothingness-return:win32]
+      sh %[butler push --userversion-file=VERSION --fix-permissions "#{WIN_BUILD_PATH}" philomory/and-to-nothingness-return:win32]
     end
     
     desc "Publish Source to itch.io"
     task :src => ['check:src','build:src'] do
       #sh %[butler push --userversion-file=VERSION --fix-permissions dist/releases/strangeness-win32-#{Version.current}.zip philomory/strangeness:win32]
-      sh %[butler push --userversion-file=VERSION #{SRC_BUILD_PATH} philomory/and-to-nothingness-return:source]
+      sh %[butler push --userversion-file=VERSION "#{SRC_BUILD_PATH}" philomory/and-to-nothingness-return:source]
     end
   end
   
