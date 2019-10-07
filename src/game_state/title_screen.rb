@@ -8,8 +8,8 @@ class GameState
       subseq(0.5) do |portion|
         @bg_alpha = (0xFF * portion).floor
       end
-      subseq(3.0) {|_| }
-      subseq(0.3) do |portion|
+      subseq(5.0) {|_| }
+      subseq(1.0) do |portion|
         @prompt_alpha = (0xFF * portion).floor
       end 
     end

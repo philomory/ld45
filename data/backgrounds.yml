@@ -1,0 +1,18 @@
+default: 
+  image: background
+level0-0:
+  image: background0
+level1-0:
+  text:
+    - content: Barriers block your progress...
+      y: 60
+    - content: ...but disolve after your passage.
+      y: 630
+level2-0:
+  text:
+    - content: Some vile power
+      y: 90
+    - content: shields these structures...
+      y: 140
+    - content: ...but they still fall eventually.
+      y: 590

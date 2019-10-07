@@ -23,6 +23,7 @@ class Game < Gosu::Window
     @ui = UI.new(self)
     
     @levels = YAML.load_file(File.join(DATA_ROOT,'levels.yml'))
+    @extra_backgrounds = YAML.load_file(File.join(DATA_ROOT,'backgrounds.yml'))
 
     MediaManager.play_music('title')
   end
@@ -41,23 +42,34 @@ class Game < Gosu::Window
 
   def draw
     if @game_state.draw_world?
-      @ui.draw
-      
+      #@ui.draw
+      draw_background
       Gosu.translate(0,UI_HEIGHT) do
         Gosu.scale(SCALE_FACTOR,SCALE_FACTOR,0,0) do
-          MediaManager.image("background").draw(0,0,0)
           Gosu.translate(TILE_WIDTH,TILE_HEIGHT) do
             @world.grid.each(&:draw)
             @world.grid.each_edge(&:draw)
             @game_state.draw unless @game_state.fullscreen?
           end
         end
-        #MediaManager.image("background0").draw(0,0,0) if @level == 0
       end
       @game_state.draw if @game_state.fullscreen?
     else
       @game_state.draw
     end
+  end
+
+  def draw_background
+    MediaManager.image("background").draw(0,0,0)
+    extra = @extra_backgrounds[level_name]
+    if extra
+      MediaManager.image(extra['image']).draw(0,0,0) if extra.has_key?('image')
+      if extra.has_key?('text')
+        extra['text'].each do |line|
+          MediaManager.font('large').draw_rel(line['content'],width/2,line['y'],10,0.5,0.5)
+        end
+      end
+    end 
   end
 
   def button_down(id)
@@ -143,11 +155,15 @@ class Game < Gosu::Window
     @level -= 1
     setup_level
   end
+
+  def level_name
+    @levels[@level]
+  end
   
   def setup_level
     Settings[:max_level] = [@level,Settings[:max_level]].max
     MediaManager.play_song_for_level(@level)
-    @world = World.new(@levels[@level])
+    @world = World.new(level_name)
     if @skip_display
       @skip_display = false
       UndoManager.level_start!

@@ -36,14 +36,14 @@
   :y: 90
   :pause: 1.8
   :duration: 1.5
--
-  :text: "Existence"
-  :x: 10
-  :y: 110
-  :pause: 1.15
   :discard: true
 -
-  :text: "Existence, a violent crime against the Void."
+  :text: "But as the Not slept, a horrid and repugnant essence arose: Existence"
+  :x: 10
+  :y: 90
+  :pause: 1.15
+-
+  :text: "A violent crime against the Void."
   :x: 10
   :y: 110
   :pause: 1.75
@@ -53,20 +53,21 @@
   :y: 150
   :pause: 1.0
   :duration: 1.5
+  :discard: true
 -
-  :text: "by disolving that Existence back into itself."
+  :text: "And the nothing could only answer by disolving that Existence back into itself."
   :x: 10
-  :y: 170
+  :y: 150
   :pause: 1.25
 -
   :text: "Start with nothing ..."
   :x: 10
-  :y: 210
+  :y: 190
   :pause: 1.0
   :discard: true
 -
   :text: "Start with nothing ... and to nothingness return."
   :x: 10
-  :y: 210
-  :duration: 2.0
-  
+  :y: 190
+  :duration: 1.5
+  :pause: 3.0  

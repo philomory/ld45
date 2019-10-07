@@ -2,10 +2,8 @@ require 'pry'
 class GameState
   class PlayerDiedState < GameState
 
-    FADE_IN_DURATION  = 250.0
+    FADE_IN_DURATION  = 500.0
     FADE_OUT_DURATION = 250.0
-
-    #DEATH_MESSAGES = YAML.load_file(File.join(DATA_ROOT,"death.yml"))
 
     def initialize(*args)
       super

@@ -50,7 +50,9 @@ class GameState
       super
       Gosu.scale(SCALE_FACTOR,SCALE_FACTOR) do
         MediaManager.image('background').draw(0,0,0)
-        @parts.each {|part| part.draw }
+        Gosu.translate(0,60) do
+          @parts.each {|part| part.draw }
+        end
       end
     end
     
