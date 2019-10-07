@@ -16,7 +16,8 @@ class GameState
     
     def draw
       super
-      #MediaManager.image("menu_instructions.png").draw_rot($game.width/2,$game.height-50,14,0.5,0.5)
+      MediaManager.image('background').draw_rot(0,0,0,0,0,0,SCALE_FACTOR,SCALE_FACTOR)
+      MediaManager.image("menu_instructions.png").draw_rot($game.width/2,$game.height-50,14,0,0.5,0.5)
     end
   end
 end

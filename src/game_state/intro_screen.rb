@@ -49,6 +49,7 @@ class GameState
     def draw
       super
       Gosu.scale(SCALE_FACTOR,SCALE_FACTOR) do
+        MediaManager.image('background').draw(0,0,0)
         @parts.each {|part| part.draw }
       end
     end
@@ -63,11 +64,7 @@ class GameState
     end
     
     def handle_input(action)
-      if [:quit,:pause].include?(action) || @finishing
-        done!
-      else
-        next_part!
-      end
+      done!
     end
     
     def draw_world?

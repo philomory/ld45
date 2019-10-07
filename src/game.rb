@@ -151,19 +151,19 @@ class Game < Gosu::Window
     Settings[:max_level] = [@level,Settings[:max_level]].max
     MediaManager.play_song_for_level(@level)
     @world = World.new(@levels[@level])
-    UndoManager.level_start!
-    #self.game_state = GameState::WaitingForPlayer.new(self)
     if @skip_display
       @skip_display = false
+      UndoManager.level_start!
       self.game_state = GameState::WaitingForPlayer.new(self)
     else
       player.animating = true
       self.game_state = GameState::LevelSplashScreen.new(self) do 
-        anim = FrameAnimation.new(player,'devouring',2000)
+        anim = FrameAnimation.new(player,'devouring',1750)
         anim.on_frame(4) do
           player.cell.terrain_collapse!
         end
         self.schedule_animation(anim) do
+          UndoManager.level_start!
           self.game_state = GameState::WaitingForPlayer.new(self) 
         end
       end

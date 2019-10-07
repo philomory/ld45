@@ -18,7 +18,7 @@
   :duration: 1.5
   :discard: true
 -
-  :text: "In the beginning, there was nothingness, and nothing else."
+  :text: "In the beginning, there was nothingness, and nothing more."
   :x: 10
   :y: 50
   :pause: 1.75
@@ -34,13 +34,13 @@
   :text: "But as the Not slept, a horrid and repugnant essence arose:"
   :x: 10
   :y: 90
-  :pause: 2.0
+  :pause: 1.8
   :duration: 1.5
 -
   :text: "Existence"
   :x: 10
   :y: 110
-  :pause: 1.25
+  :pause: 1.15
   :discard: true
 -
   :text: "Existence, a violent crime against the Void."
@@ -59,13 +59,14 @@
   :y: 170
   :pause: 1.25
 -
-  :text: "Start with nothing..."
+  :text: "Start with nothing ..."
   :x: 10
   :y: 210
   :pause: 1.0
+  :discard: true
 -
-  :text: "...and to nothingness return."
-  :x: 150
+  :text: "Start with nothing ... and to nothingness return."
+  :x: 10
   :y: 210
   :duration: 2.0
   
