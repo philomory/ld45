@@ -101,18 +101,18 @@ end
 namespace :release do
   namespace :check do
     task :mac do
-      released_version = JSON.parse(HTTParty.get("https://itch.io/api/1/x/wharf/latest?target=philomory/and-to-nothingness-return&channel_name=macos").body)
-      raise "#{Version.current} already released for MacOS" if released_version == Version.current
+      #released_version = JSON.parse(HTTParty.get("https://itch.io/api/1/x/wharf/latest?target=philomory/and-to-nothingness-return&channel_name=macos").body)
+      #raise "#{Version.current} already released for MacOS" if released_version == Version.current
     end
     
     task :win do
-      released_version = JSON.parse(HTTParty.get("https://itch.io/api/1/x/wharf/latest?target=philomory/and-to-nothingness-return&channel_name=win32").body)
-      raise "#{Version.current} already released for Windows" if released_version == Version.current
+      #released_version = JSON.parse(HTTParty.get("https://itch.io/api/1/x/wharf/latest?target=philomory/and-to-nothingness-return&channel_name=win32").body)
+      #raise "#{Version.current} already released for Windows" if released_version == Version.current
     end
     
     task :src do
-      released_version = JSON.parse(HTTParty.get("https://itch.io/api/1/x/wharf/latest?target=philomory/and-to-nothingness-return&channel_name=source").body)
-      raise "#{Version.current} already released as source" if released_version == Version.current
+      #released_version = JSON.parse(HTTParty.get("https://itch.io/api/1/x/wharf/latest?target=philomory/and-to-nothingness-return&channel_name=source").body)
+      #raise "#{Version.current} already released as source" if released_version == Version.current
     end
       
   end
@@ -128,7 +128,7 @@ namespace :release do
     desc "Windows Release"
     task :win => ['check:win', 'build:win', 'dist/releases'] do
       Dir.chdir('dist/win32/build') do
-        sh %[zip -r ../../releases/nothingness-win32-#{Version.current}.zip Strangeness]
+        sh %[zip -r ../../releases/nothingness-win32-#{Version.current}.zip "And to Nothingness Return"]
       end
     end    
   end
