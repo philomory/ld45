@@ -1,3 +1,4 @@
+require 'pry'
 class GameState
   class PlayerDiedState < GameState
 
@@ -13,22 +14,11 @@ class GameState
       font_path = MediaManager.font_path('large')
       message1 = "Undo: Z"
       message2 = "Restart: R"
-      #@death_message = DEATH_MESSAGES.sample
-      #@points = Array.new(50) { random_point }
       
       @message1 = Gosu::Image.from_text(message1, 44, font: font_path, retro: true)
       @message2 = Gosu::Image.from_text(message2, 44, font: font_path, retro: true)
     end
     
-
-    
-    def random_point
-      x = rand(0..@game.width)
-      y = rand(0..@game.height)
-      c = rand * rand * 0.5
-      m = DEATH_MESSAGES.sample
-      [x,y,c,m]
-    end
 
     def handle_input(action)
       case action
@@ -39,8 +29,6 @@ class GameState
     
     def draw
       Gosu.draw_rect(0,0,$game.width,$game.height,bg_color,11)
-      #@points.each {|x,y,c,m| MediaManager.font("large").draw_rel(m,x,y,13,0.5,0.5,1,1,color(c)) }
-      #MediaManager.font("large").draw_rel(@death_message,$game.width/2,100,14,0.5,0.5,1,1,color)
       @message1.draw_rot(100, center_y,14,0,0.0,0.5,1,1,color)
       @message2.draw_rot($game.width-100, center_y,14,0,1.0,0.5,1,1,color)
     end
@@ -79,7 +67,7 @@ class GameState
     end
   
     def bg_color
-      bg_color = (0xCC * (1.0 - fade_portion)).floor * 0x01000000
+      bg_color = (0x40 * (1.0 - fade_portion)).floor * 0x01000000
     end
   
     def fade_portion

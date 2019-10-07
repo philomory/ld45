@@ -155,7 +155,10 @@ class Game < Gosu::Window
     else
       player.animating = true
       self.game_state = GameState::LevelSplashScreen.new(self) do 
-        anim = FrameAnimation.new(player,'devouring',1750)
+        anim = FrameAnimation.new(player,'devouring',1300)
+        anim.on_frame(0) do
+          MediaManager.play_sfx('start')
+        end
         anim.on_frame(4) do
           player.cell.terrain_collapse!
         end
@@ -164,7 +167,6 @@ class Game < Gosu::Window
           UndoManager.level_start!
           self.game_state = GameState::WaitingForPlayer.new(self)
         end
-        MediaManager.play_sfx('start')
       end
     end
   end
