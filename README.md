@@ -7,9 +7,9 @@ In the beginning, there was nothingness, and nothing more.
 But as the Not slept, a horrid and repugnant essence arose:
 Existence, a violent crime against the Void.
 
-And the nothing could only answer, by disolving that Existence back into itself.
+And the nothing could only answer, by dissolving that Existence back into itself.
 
-Start with nothing ... and to nothingness return
+Start with nothing ... and to nothingness return.
 
 ## About the Game
 
