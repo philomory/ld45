@@ -2,12 +2,12 @@
 .DS_Store
 .tm_properties
 dist/macos/ruby-app/UniversalRuby
-dist/macos/ruby-app/LD45.app
+dist/macos/ruby-app/And to Nothingness Return.app
 dist/macos/ruby-app/Wrapper.app
-dist/win32/LD45
+dist/win32/And to Nothingness Return
 dist/win32/*.zip
 dist/macos/*.zip
-dist/macos/LD45.app
+dist/macos/And to Nothingness Return.app
 dist/*/build
 dist/releases
 scratch/

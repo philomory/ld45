@@ -89,5 +89,9 @@ class GameState
       fade_portion < 1
     end
 
+    def next_state
+      WaitingForPlayer.new
+    end
+
   end
 end

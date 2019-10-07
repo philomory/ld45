@@ -26,14 +26,13 @@ class GameState
       when :undo
         UndoManager.undo_turn!
       end
+    end  
+    def next_state
+      CheckWorldState.new(EnemyAction)
     end
-  end
-  
-  def next_state
-    CheckWorldState.new(EnemyAction)
-  end
-  
-  def animation_duration
-    100
+    
+    def animation_duration
+      100
+    end
   end
 end

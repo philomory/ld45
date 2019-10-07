@@ -1,5 +1,4 @@
 require 'gosu'
-require 'pry'
 
 class Game < Gosu::Window
   def self.play!

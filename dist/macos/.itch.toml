@@ -1,0 +1,4 @@
+[[actions]]
+name = "play"
+path = "And to Nothingness Return.app"
+sandbox = true

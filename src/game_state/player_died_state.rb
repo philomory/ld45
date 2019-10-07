@@ -1,10 +1,10 @@
 class GameState
   class PlayerDiedState < GameState
 
-    FADE_IN_DURATION  = 500.0
+    FADE_IN_DURATION  = 250.0
     FADE_OUT_DURATION = 250.0
 
-    DEATH_MESSAGES = YAML.load_file(File.join(DATA_ROOT,"death.yml"))
+    #DEATH_MESSAGES = YAML.load_file(File.join(DATA_ROOT,"death.yml"))
 
     def initialize(*args)
       super
@@ -13,8 +13,8 @@ class GameState
       font_path = MediaManager.font_path('large')
       message1 = "Undo: Z"
       message2 = "Restart: R"
-      @death_message = DEATH_MESSAGES.sample
-      @points = Array.new(50) { random_point }
+      #@death_message = DEATH_MESSAGES.sample
+      #@points = Array.new(50) { random_point }
       
       @message1 = Gosu::Image.from_text(message1, 44, font: font_path, retro: true)
       @message2 = Gosu::Image.from_text(message2, 44, font: font_path, retro: true)
@@ -39,8 +39,8 @@ class GameState
     
     def draw
       Gosu.draw_rect(0,0,$game.width,$game.height,bg_color,11)
-      @points.each {|x,y,c,m| MediaManager.font("large").draw_rel(m,x,y,13,0.5,0.5,1,1,color(c)) }
-      MediaManager.font("large").draw_rel(@death_message,$game.width/2,100,14,0.5,0.5,1,1,color)
+      #@points.each {|x,y,c,m| MediaManager.font("large").draw_rel(m,x,y,13,0.5,0.5,1,1,color(c)) }
+      #MediaManager.font("large").draw_rel(@death_message,$game.width/2,100,14,0.5,0.5,1,1,color)
       @message1.draw_rot(100, center_y,14,0,0.0,0.5,1,1,color)
       @message2.draw_rot($game.width-100, center_y,14,0,1.0,0.5,1,1,color)
     end

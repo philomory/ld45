@@ -1,0 +1,5 @@
+[[actions]]
+name = "play"
+path = "src/and_to_nothingness_return_itch.bat"
+sandbox = true
+console = false

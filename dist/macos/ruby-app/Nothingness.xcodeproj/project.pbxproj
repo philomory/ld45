@@ -1,0 +1,242 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66BDC74C1EAEDBE500DED250 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 66BDC7491EAEDBE500DED250 /* data */; };
+		66BDC74D1EAEDBE500DED250 /* media in Resources */ = {isa = PBXBuildFile; fileRef = 66BDC74A1EAEDBE500DED250 /* media */; };
+		66BDC74E1EAEDBE500DED250 /* src in Resources */ = {isa = PBXBuildFile; fileRef = 66BDC74B1EAEDBE500DED250 /* src */; };
+		D425BB5D1796CF4000540499 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D425BB5C1796CF4000540499 /* Cocoa.framework */; };
+		D49E57C61D69BD72001A2D1F /* libruby.2.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D49E57C51D69BD72001A2D1F /* libruby.2.3.0.dylib */; };
+		D49E57C71D69BDA7001A2D1F /* libruby.2.3.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = D49E57C51D69BD72001A2D1F /* libruby.2.3.0.dylib */; };
+		D4EF91841797495A00ACB192 /* lib in Resources */ = {isa = PBXBuildFile; fileRef = D4EF91831797495A00ACB192 /* lib */; };
+		D4EF918617974AFC00ACB192 /* Strangeness.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4EF918517974AFC00ACB192 /* Strangeness.icns */; };
+		D4EF918917974B5800ACB192 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EF918717974B5800ACB192 /* main.m */; };
+		D4EF918A17974B5800ACB192 /* main.rb in Resources */ = {isa = PBXBuildFile; fileRef = D4EF918817974B5800ACB192 /* main.rb */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4EF91811797473C00ACB192 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D49E57C71D69BDA7001A2D1F /* libruby.2.3.0.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		66BDC7491EAEDBE500DED250 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../../../data; sourceTree = "<group>"; };
+		66BDC74A1EAEDBE500DED250 /* media */ = {isa = PBXFileReference; lastKnownFileType = folder; name = media; path = ../../../media; sourceTree = "<group>"; };
+		66BDC74B1EAEDBE500DED250 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; name = src; path = ../../../src; sourceTree = "<group>"; };
+		D425BB591796CF4000540499 /* Strangeness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strangeness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D425BB5C1796CF4000540499 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D425BB5F1796CF4000540499 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D425BB601796CF4000540499 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D425BB611796CF4000540499 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D49E57C51D69BD72001A2D1F /* libruby.2.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libruby.2.3.0.dylib; path = UniversalRuby/libruby.2.3.0.dylib; sourceTree = "<group>"; };
+		D4EF91831797495A00ACB192 /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = UniversalRuby/lib; sourceTree = SOURCE_ROOT; };
+		D4EF918517974AFC00ACB192 /* Strangeness.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Strangeness.icns; sourceTree = SOURCE_ROOT; };
+		D4EF918717974B5800ACB192 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		D4EF918817974B5800ACB192 /* main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = main.rb; sourceTree = SOURCE_ROOT; };
+		D4EF918E17976ABA00ACB192 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D425BB561796CF4000540499 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D425BB5D1796CF4000540499 /* Cocoa.framework in Frameworks */,
+				D49E57C61D69BD72001A2D1F /* libruby.2.3.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D425BB501796CF4000540499 = {
+			isa = PBXGroup;
+			children = (
+				66BDC7491EAEDBE500DED250 /* data */,
+				66BDC74A1EAEDBE500DED250 /* media */,
+				66BDC74B1EAEDBE500DED250 /* src */,
+				D425BB621796CF4000540499 /* ruby_app */,
+				D425BB5B1796CF4000540499 /* Frameworks */,
+				D425BB5A1796CF4000540499 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D425BB5A1796CF4000540499 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D425BB591796CF4000540499 /* Strangeness.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D425BB5B1796CF4000540499 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D425BB5C1796CF4000540499 /* Cocoa.framework */,
+				D425BB5E1796CF4000540499 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D425BB5E1796CF4000540499 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D425BB5F1796CF4000540499 /* AppKit.framework */,
+				D425BB601796CF4000540499 /* CoreData.framework */,
+				D425BB611796CF4000540499 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		D425BB621796CF4000540499 /* ruby_app */ = {
+			isa = PBXGroup;
+			children = (
+				D4EF918E17976ABA00ACB192 /* Info.plist */,
+				D4EF91831797495A00ACB192 /* lib */,
+				D49E57C51D69BD72001A2D1F /* libruby.2.3.0.dylib */,
+				D4EF918717974B5800ACB192 /* main.m */,
+				D4EF918817974B5800ACB192 /* main.rb */,
+				D4EF918517974AFC00ACB192 /* Strangeness.icns */,
+			);
+			name = ruby_app;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D425BB581796CF4000540499 /* Strangeness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D425BB761796CF4100540499 /* Build configuration list for PBXNativeTarget "Strangeness" */;
+			buildPhases = (
+				D425BB551796CF4000540499 /* Sources */,
+				D425BB561796CF4000540499 /* Frameworks */,
+				D425BB571796CF4000540499 /* Resources */,
+				D4EF91811797473C00ACB192 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Strangeness;
+			productName = Ruby;
+			productReference = D425BB591796CF4000540499 /* Strangeness.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D425BB511796CF4000540499 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Adam Gardner";
+			};
+			buildConfigurationList = D425BB541796CF4000540499 /* Build configuration list for PBXProject "Strangeness" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D425BB501796CF4000540499;
+			productRefGroup = D425BB5A1796CF4000540499 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D425BB581796CF4000540499 /* Strangeness */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D425BB571796CF4000540499 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66BDC74C1EAEDBE500DED250 /* data in Resources */,
+				66BDC74D1EAEDBE500DED250 /* media in Resources */,
+				66BDC74E1EAEDBE500DED250 /* src in Resources */,
+				D4EF91841797495A00ACB192 /* lib in Resources */,
+				D4EF918617974AFC00ACB192 /* Strangeness.icns in Resources */,
+				D4EF918A17974B5800ACB192 /* main.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D425BB551796CF4000540499 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4EF918917974B5800ACB192 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D425BB751796CF4100540499 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				HEADER_SEARCH_PATHS = (
+					UniversalRuby/include,
+					"UniversalRuby/include/$(arch)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = "";
+			};
+			name = Release;
+		};
+		D425BB781796CF4100540499 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = .;
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UniversalRuby\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ldjam.philomory.ld38.strangeness;
+				PRODUCT_NAME = Strangeness;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D425BB541796CF4000540499 /* Build configuration list for PBXProject "Strangeness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D425BB751796CF4100540499 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D425BB761796CF4100540499 /* Build configuration list for PBXNativeTarget "Strangeness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D425BB781796CF4100540499 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D425BB511796CF4000540499 /* Project object */;
+}
