@@ -25,7 +25,7 @@ class Game < Gosu::Window
     
     @levels = YAML.load_file(File.join(DATA_ROOT,'levels.yml'))
 
-    MediaManager.play_music
+    MediaManager.play_music('title')
   end
   
   def toggle_fullscreen!
@@ -90,12 +90,12 @@ class Game < Gosu::Window
   
   def pause
     @paused = true
-    @game_state = GameState::PauseMenu.new
+    self.game_state = GameState::PauseMenu.new
   end
   
   def unpause
     @paused = false
-    @game_state = GameState::WaitingForPlayer.new
+    self.game_state = GameState::WaitingForPlayer.new
   end
   
   def paused?
@@ -163,9 +163,11 @@ class Game < Gosu::Window
           player.cell.terrain_collapse!
         end
         self.schedule_animation(anim) do
+          player.cell.terrain_collapse! if player.cell.terrain != Terrain::Empty
           UndoManager.level_start!
-          self.game_state = GameState::WaitingForPlayer.new(self) 
+          self.game_state = GameState::WaitingForPlayer.new(self)
         end
+        MediaManager.play_sfx('start')
       end
     end
   end

@@ -1,7 +1,7 @@
 module Settings
   DEFAULTS = { 
     max_level: 0,
-    music: 10,
+    music: 5,
     sfx: 5,
     fullscreen: false,
     input: InputManager.defaults

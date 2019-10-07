@@ -19,7 +19,6 @@ class World
       ter, dec = level_data[cell.x,cell.y]
       cell.terrain = ter || Terrain::Empty
       cell.decoration = dec
-      # binding.pry if cell.x == 6 && cell.y == 3
       if cell.right_edge
         cell.right_edge.blocked = !!level_data.right_edge(cell.x,cell.y)
       end

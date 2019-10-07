@@ -1,6 +1,6 @@
 class FrameAnimation < Animation
   attr_reader :position
-  def initialize(object,key,duration,skippable=false)
+  def initialize(object,key,duration,skippable=true)
     @object = object
     @position = [@object.cell.xpos,@object.cell.ypos]
     @frames = MediaManager.animation_frames(key)

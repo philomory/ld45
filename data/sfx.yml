@@ -4,3 +4,4 @@ enemy_stunned: enemy_stunned.wav
 player_hurt: player_died.wav
 unlock: door_opened.wav
 buzzer: buzzer.wav
+start: start.wav

@@ -19,7 +19,7 @@ class GameState
     end
 
     def on_enter
-      @start_time = Time.now
+      MediaManager.play_music("title")
     end
 
     def draw

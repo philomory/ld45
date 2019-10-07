@@ -17,7 +17,7 @@ class AnimationManager
       after = @game.game_state.next_state
       animations = total_animation
       @scheduled_animations = {}
-      @game.game_state = GameState::PlayingAnimation.new(@game,animations) { @game.game_state = after}
+      @game.game_state = GameState::PlayingAnimation.new(@game,animations) { @game.game_state = after unless @game.paused? }
     end
   end
   

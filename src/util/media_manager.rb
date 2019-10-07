@@ -55,7 +55,6 @@ module MediaManager
     end
     
     def sfx?
-      return false
       Settings[:sfx] > 0
     end
   
@@ -80,15 +79,14 @@ module MediaManager
     end
   
     def play_music(name=nil)
-      return
       name ||= song_for_level($game.level)
       song = song(name)
-      song.volume = Settings[:music] / 10.0
+      song.volume = (Settings[:music] / 10.0)**2
       song.play(true)
     end
     
     def music_volume=(vol)
-      Gosu::Song.current_song&.volume = (vol / 10.0)
+      Gosu::Song.current_song&.volume = (vol / 10.0)**2
       Settings[:music] = vol
     end
       
