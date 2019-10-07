@@ -2,13 +2,13 @@
   :text: "In the beginning, there was the Void."
   :x: 10
   :y: 10
-  :pause: 1.25
+  :pause: 1.0
   :duration: 1.5
 -
   :text: "In the beginning, there was the Not."
   :x: 10
   :y: 30
-  :pause: 1.25
+  :pause: 1.0
   :duration: 1.5
 -
   :text: "In the beginning, there was nothingness"
@@ -21,7 +21,7 @@
   :text: "In the beginning, there was nothingness, and nothing more."
   :x: 10
   :y: 50
-  :pause: 1.75
+  :pause: 1.25
   :duration: 1.5
 -
   :text: "But as the Not slept,"

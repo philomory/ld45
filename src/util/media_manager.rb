@@ -81,12 +81,12 @@ module MediaManager
     def play_music(name=nil)
       name ||= song_for_level($game.level)
       song = song(name)
-      song.volume = (Settings[:music] / 10.0)**2
+      song.volume = ((Settings[:music] / 10.0)**2)/2
       song.play(true)
     end
     
     def music_volume=(vol)
-      Gosu::Song.current_song&.volume = (vol / 10.0)**2
+      Gosu::Song.current_song&.volume = ((vol / 10.0)**2)/2
       Settings[:music] = vol
     end
       
@@ -125,7 +125,7 @@ module MediaManager
       if fname
         path = File.join(MEDIA_ROOT,"music",fname)
         song = Gosu::Song.new(path)
-        song.volume = 0.75
+        song.volume = 0.3
         song
       end
     end

@@ -31,12 +31,15 @@ class GameState
     def draw
       bg_color = (0xEE * (1.0 - fade_portion)).floor * 0x01000000
       MediaManager.image("credits").draw(0,0,11)
-      draw_text("Programming, Art, Audio and Design",150)
-      draw_text("Adam Gardner",200)
-      draw_text("Tileset",350)
-      draw_text("Lanea Zimmerman",400)
-      draw_text("Paul Barden",450)
-      draw_text("Alagard and Romulus fonts by Pix3M",600)
+      draw_text("Programming, Art, SFX and Design",75)
+      draw_text("Adam Gardner",125)
+      draw_text("Tileset",225)
+      draw_text("'Tiny World Map' by",275)
+      draw_text("Lanea Zimmerman and Paul Barden",325)
+      draw_text("Music",425)
+      draw_text("'Tangible Darkness' by Keplar",475)
+      draw_text("Fonts",575)
+      draw_text("'Alagard' and 'Romulus' by Pix3M",625)
     end
     
     def draw_text(msg,ypos)

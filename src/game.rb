@@ -136,13 +136,11 @@ class Game < Gosu::Window
   end
   
   def next_level
-    MediaManager.play_sfx('portal')
     @level += 1
     @level < @levels.count ? setup_level : to_be_continued
   end
   
   def prev_level
-    MediaManager.play_sfx('portal')
     @level -= 1
     setup_level
   end
