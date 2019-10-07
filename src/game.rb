@@ -17,7 +17,7 @@ class Game < Gosu::Window
 
     @input_manager = InputManager
     @animation_manager = AnimationManager.new(self)
-    @game_state = GameState::TitleScreen.new(self)
+    self.game_state = GameState::TitleScreen.new(self)
 
     self.caption = "...and to Nothingness Return"
     

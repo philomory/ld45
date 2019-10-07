@@ -33,8 +33,9 @@ class GameState
       MediaManager.image("credits").draw(0,0,11)
       draw_text("Programming, Art, Audio and Design",200)
       draw_text("Adam Gardner",250)
-      draw_text("Additional Art",400)
-      draw_text("Jessie",450)
+      draw_text("Tileset",400)
+      draw_text("Lanea Zimmerman",450)
+      draw_text("Paul Barden",500)
       draw_text("Alagard and Romulus fonts by Pix3M",600)
     end
     

@@ -2,7 +2,7 @@ class GameState
   class IntroScreen < SequenceScreen
     class Part
       attr_accessor :alpha, :pause, :duration, :discard
-      def initialize(text:, x:, y:,pause: 0.75, duration: 1.5, discard: false)
+      def initialize(text:, x:, y:,pause: 1.0, duration: 1.5, discard: false)
         @text = text
         @x, @y = x, y
         @pause, @duration, @discard = pause, duration, discard
@@ -22,10 +22,9 @@ class GameState
       end
     end
     
-    def initialize(key,*args,&blk)
-      super(*args)
-      @done_callback = blk
-      @parts = _load_parts(key)
+    def initialize(*args)
+      super
+      @parts = _load_parts
       @skip = 0
       @part_num = 0
       @finishing = false
@@ -80,10 +79,9 @@ class GameState
     end
     
     private
-    def _load_parts(key)
+    def _load_parts
       path = File.join(DATA_ROOT,'intro.yml')
-      data = YAML.load_file(path)
-      parts = data[key]
+      parts = YAML.load_file(path)
       parts.map {|hsh| Part.new(**hsh) }
     end
   end
