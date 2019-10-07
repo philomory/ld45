@@ -19,7 +19,7 @@ class FrameAnimation < Animation
   end
   
   def frame_index
-    [(portion * @frames.count).floor,@frames.count].min
+    [(portion * @frames.count).floor,@frames.count-1].min
   end
 
   def current_frame

@@ -27,15 +27,15 @@ SRC_BUILD_PATH = 'dist/source/build/And to Nothingness Return'
 namespace :clean do
 
   task :mac do
-    rm_r MAC_BUILD_PATH if File.exists?('dist/macos/build')
+    rm_r MAC_BUILD_PATH if File.exists?(MAC_BUILD_PATH)
   end
   
   task :win do
-    rm_r WIN_BUILD_PATH if File.exists?('dist/win32/build')
+    rm_r WIN_BUILD_PATH if File.exists?(WIN_BUILD_PATH)
   end
   
   task :src do
-    rm_r SRC_BUILD_PATH if File.exists?('dist/source/build')
+    rm_r SRC_BUILD_PATH if File.exists?(SRC_BUILD_PATH)
   end
   
 end
