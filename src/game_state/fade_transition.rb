@@ -2,7 +2,7 @@ class GameState
   class FadeTransition < GameState
     def initialize(from,to)
       @from, @to = from, to
-      @fade_duration = 250
+      @fade_duration = 1000
       super()
     end
     
@@ -19,7 +19,7 @@ class GameState
     end
     
     def portion
-      run_time.to_f / @fade_duration.to_f
+      [[(run_time.to_f / @fade_duration.to_f),0].max,2].min
     end
 
     def update
@@ -41,6 +41,7 @@ class GameState
     end
       
     def draw_overlay(fraction)
+      fraction = [[0,fraction].max,1].min
       bg_color = (0xFF * fraction).floor * 0x01000000
       Gosu.draw_rect(0,0,@game.width,@game.height,bg_color,99999)
     rescue RangeError => e
