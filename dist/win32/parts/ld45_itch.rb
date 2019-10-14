@@ -10,7 +10,7 @@ APP_ROOT = File.dirname(__FILE__)
 SOURCE_ROOT = File.join(APP_ROOT,'src')
 MEDIA_ROOT = File.join(APP_ROOT,'media')
 DATA_ROOT = File.join(APP_ROOT,'data')
-SETTINGS_DIR = File.join(ENV['APPDATA'],'strangeness')
+SETTINGS_DIR = File.join(ENV['APPDATA'],'And to Nothingness Return')
 
 FileUtils.mkdir_p SETTINGS_DIR unless File.directory?(SETTINGS_DIR)
 

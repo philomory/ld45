@@ -5,7 +5,7 @@ cd ..
 mkdir "%appdata%\And to Nothingness Return\"
 mkdir "%appdata%\And to Nothingness Return\game"
 
-set GF="%appdata%\And to Nothingness Return\game"
+set GF=%appdata%\And to Nothingness Return\game
 
 copy ld45_itch.rb "%GF%\"
 xcopy /s /y ruby "%GF%\ruby\"

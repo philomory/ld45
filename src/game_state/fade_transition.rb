@@ -43,6 +43,15 @@ class GameState
     def draw_overlay(fraction)
       bg_color = (0xFF * fraction).floor * 0x01000000
       Gosu.draw_rect(0,0,@game.width,@game.height,bg_color,99999)
+    rescue RangeError => e
+      p({
+        portion: portion,
+        fraction: fraction,
+        bg_color: bg_color,
+        width: @game.width,
+        height: @game.height,
+      })
+      raise
     end
       
   end
