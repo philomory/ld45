@@ -51,7 +51,7 @@ module MediaManager
     
     def sfx_volume=(vol)
       Settings[:sfx] = vol
-      play_sfx('pickup_key')
+      play_sfx('sound_check')
     end
     
     def sfx?
